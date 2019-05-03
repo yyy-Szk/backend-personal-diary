@@ -24,7 +24,6 @@ ActiveRecord::Schema.define(version: 2019_04_24_034411) do
 
   create_table "memos", force: :cascade do |t|
     t.string "content", null: false
-    t.integer "diary_id", null: false
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
