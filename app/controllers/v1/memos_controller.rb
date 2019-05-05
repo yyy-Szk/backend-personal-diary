@@ -1,9 +1,10 @@
 class V1::MemosController < ApplicationController
+  before_action :authenticate_v1_user!
 
   def index
     today = Time.now
     today_range = today.beginning_of_day..today.end_of_day
-    todays_memos = Memo.where(user_id: 1, created_at: today_range)
+    todays_memos = Memo.where(user_id: params[:id], created_at: today_range)
     memos = todays_memos.map { |memo| { id: memo.id, content: memo.content, time: memo.created_at.strftime("%H：%M") } }
     render json: {memos: memos}
   end

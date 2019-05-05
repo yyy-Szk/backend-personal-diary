@@ -1,6 +1,9 @@
 class V1::DiariesController < ApplicationController
+  before_action :authenticate_v1_user!
+
   def index
-    diaries = Diary.all.order(created_at: "ASC")
+
+    diaries = Diary.where(user_id: params[:id]).order(created_at: "ASC")
     diaries = diaries.map { |diary| {id: diary.id, content: diary.content, year: diary.created_at.strftime("%Y"),
                           month: diary.created_at.strftime("%-m"), day: diary.created_at.strftime("%d")} }
     render json: {diaries: diaries}
