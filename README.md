@@ -1,24 +1,9 @@
-# README
+# 初期ユーザー
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+email：saisaityotyottyo@gmail.com
+password：12345678
 
-Things you may want to cover:
 
-* Ruby version
+# 作成の意図
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+業務でRuby on RailsとReact.jsを触ったが、それらを別々のサーバーで運用してみたいと思い、勉強目的で作成。
