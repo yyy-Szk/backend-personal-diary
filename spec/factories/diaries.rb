@@ -1,6 +1,6 @@
-# Read about factories at https://github.com/thoughtbot/factory_girl
-
-FactoryGirl.define do
+FactoryBot.define do
   factory :diary do
+    sequence(:content) { |n| "diary_content_#{n}"}
+    user_id { 1 }
   end
 end

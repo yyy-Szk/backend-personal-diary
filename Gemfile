@@ -37,8 +37,9 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 
 # test
-  gem 'rspec-rails', '~> 3.0.0'
-  gem 'factory_girl_rails', '~> 3.0'
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'database_cleaner'
 
 # debug
   gem 'pry-rails'
