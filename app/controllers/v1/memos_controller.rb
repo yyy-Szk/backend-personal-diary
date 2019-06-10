@@ -13,6 +13,7 @@ class V1::MemosController < ApplicationController
     render json: {message: 'faild'} and return
   end
 
+# 他のユーザーのメモも削除できてしまう？
   def destroy
     memo = Memo.find_by(id: params[:id])
     render json: { message: 'success' } and return if memo&.destroy
